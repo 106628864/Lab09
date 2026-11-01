@@ -25,11 +25,11 @@ if ($dbconn) {
         while ($row = mysqli_fetch_assoc($result)) {
           
             echo "<tr>";
-            echo "<td>" . $row['car_id'] . "</td>";
-            echo "<td>" . $row['make'] . "</td>";
-            echo "<td>" . $row['model'] . "</td>";
-            echo "<td>" . $row['price'] . "</td>";
-            echo "<td>" . $row['yom'] . "</td>";
+            echo "<td>" . htmlspecialchars((string)$row['car_id']) . "</td>";
+            echo "<td>" . htmlspecialchars((string)$row['make']) . "</td>";
+            echo "<td>" . htmlspecialchars((string)$row['model']) . "</td>";
+            echo "<td>" . htmlspecialchars((string)$row['price']) . "</td>";
+            echo "<td>" . htmlspecialchars((string)$row['yom']) . "</td>";
             echo "</tr>";
         }
         echo "</table>";
