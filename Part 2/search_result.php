@@ -39,6 +39,6 @@ if ($dbconn) {
 } else {
     echo "Please enter a model to search.";
 }
-
+}
 mysqli_close($dbconn);
 ?>
